@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer components {
+  .container-sm {
+    @apply max-w-md mx-auto sm:max-w-lg;
+  }
+
+  .neo-shadow {
+    @apply shadow-[0.25rem_0.25rem_0px_0px_rgba(0,0,0,1)] hover:shadow-[0.5rem_0.5rem_0px_0px_rgba(0,0,0,1)];
+  }
+}
